@@ -63,5 +63,5 @@ lib
 # Flowtype
 flow-typed/
 
-*.js
+/*.js
 !webpack.config.js
