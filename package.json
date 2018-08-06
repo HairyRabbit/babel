@@ -15,7 +15,9 @@
     "url": "git+https://github.com/HairyRabbit/babel.git"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "in-test.js",
+    "remove-test.js"
   ],
   "keywords": [],
   "author": "Rabbit<yfhj1990@hotmail.com>",
