@@ -1,0 +1,43 @@
+{
+  "name": "@rabbitcc/babel",
+  "version": "0.0.1",
+  "description": "babel plugins",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node bin/cli.js",
+    "build": "cross-env NODE_ENV=production npx webpack -r esm",
+    "test": "cross-env NODE_ENV=test npx mocha -r @babel/register -r esm",
+    "type": "npx flow check",
+    "prepublishOnly": "npm run test && npm run type && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HairyRabbit/babel.git"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [],
+  "author": "Rabbit<yfhj1990@hotmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/HairyRabbit/babel/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.56",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.56",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.56",
+    "@babel/preset-env": "^7.0.0-beta.56",
+    "@babel/preset-flow": "^7.0.0-beta.56",
+    "@babel/register": "^7.0.0-beta.56",
+    "babel-loader": "^8.0.0-beta.4",
+    "esm": "^3.0.74",
+    "flow-bin": "^0.73.0",
+    "mocha": "^5.2.0",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
