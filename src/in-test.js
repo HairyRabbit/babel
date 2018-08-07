@@ -11,7 +11,7 @@ export default function plugin({ types: t }: any) {
 
   return {
     visitor: {
-      Program(path: any, { filename }) {
+      Program(path: any, { filename }: any) {
         let describe = null
 
         const comment = path.parent.comments.find(s => {
@@ -27,7 +27,10 @@ export default function plugin({ types: t }: any) {
         }
 
         if(!describe) {
-          describe = `test ${basename(filename, extname(filename))}`
+          const fileName = filename
+                ? basename(filename, extname(filename))
+                : 'unknow'
+          describe = `test ${fileName}`
         }
 
         path.node.body.push(

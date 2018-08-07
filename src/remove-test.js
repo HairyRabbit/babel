@@ -4,7 +4,7 @@
  * @flow
  */
 
-export default function plugin({ types: t }) {
+export default function plugin({ types: t }: any) {
   return {
     visitor: {
       ImportDeclaration(path: any) {

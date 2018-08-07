@@ -15,7 +15,7 @@ function $test_should_convert() {
     })
 
     assert(result.code == `\
-describe("test in-test", function () {
+describe("test unknow", function () {
   it("should convert", function () {});
 })`)
   })
