@@ -14,7 +14,17 @@ function $test_should_convert() {
       plugins: [plugin]
     })
 
-    console.log(result.code)
+    assert(result.code == ``)
+  })
+
+  it('should remove assert module', function() {
+    const code = `import 'assert'`
+
+    const result = transform(code, {
+      babelrc: false,
+      plugins: [plugin]
+    })
+
     assert(result.code == ``)
   })
 })
