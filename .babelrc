@@ -35,7 +35,9 @@
     },
     "production": {
       "plugins": [
-        './remove-test'
+        ["./remove-test", {
+          "include": ["@babel/core"]
+        }]
       ]
     }
   }
