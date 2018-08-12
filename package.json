@@ -1,6 +1,6 @@
 {
   "name": "@rabbitcc/babel",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "babel plugins",
   "main": "index.js",
   "scripts": {
