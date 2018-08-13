@@ -44,6 +44,8 @@ function sum(a, b) {
 ### Usage
 
 ```js
+// basic usage
+
 {
   "plugins": ["@rabbitcc/remove-test"]
 }
@@ -60,7 +62,9 @@ function sum(a, b) {
 
 {
   "env": {
-    "plugins": ["@rabbitcc/remove-test"]
+    "production": {
+      "plugins": ["@rabbitcc/remove-test"]
+    }
   }
 }
 ```
